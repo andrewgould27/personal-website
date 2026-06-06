@@ -32,7 +32,7 @@ export default [
   {
     files: ['**/*.test.{js,jsx}'],
     languageOptions: {
-      globals: { ...globals.browser, ...globals.vitest },
+      globals: { ...globals.browser, ...globals.vitest, ...globals.node },
     },
   },
   {
