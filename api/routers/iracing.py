@@ -14,7 +14,7 @@ async def career_stats():
     if not member_id:
         raise HTTPException(status_code=500, detail="IRACING_MEMBER_ID not configured")
 
-    async with httpx.AsyncClient() as client:
+    async with httpx.AsyncClient(timeout=30.0) as client:
         response = await client.get(f"{_BACKEND}/member-career-stats/career/{member_id}")
 
     if response.status_code != 200:
