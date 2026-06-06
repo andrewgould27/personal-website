@@ -5,3 +5,8 @@ This is the repo for my personal website [andrewgould.dev](https://andrewgould.d
 ## Architecture
 
 This website is hosted on a Hetzner VPS. 
+
+| Container | Port |
+| --------- | ---- |
+| frontend  | 5173 |
+| api       | 8000 |
