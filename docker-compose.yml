@@ -5,6 +5,8 @@ services:
       - "8000:8000"
     env_file:
       - .env
+    networks:
+      - web
 
   frontend:
     build: ./frontend
@@ -14,3 +16,9 @@ services:
       - API_URL=http://api:8000
     depends_on:
       - api
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
